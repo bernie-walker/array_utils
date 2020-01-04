@@ -1,3 +1,7 @@
+const getFirst = function(array) {
+  return array[0];
+};
+
 const getLast = function(array) {
   return array[array.length - 1];
 };
@@ -16,4 +20,4 @@ const partition = function(quality, array) {
   return result;
 };
 
-module.exports = { partition, getLast };
+module.exports = { partition, getLast, getFirst };

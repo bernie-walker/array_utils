@@ -1,5 +1,5 @@
 const { assert } = require('chai');
-const { partition, getLast } = require('../src/arrayUtils');
+const { partition, getLast, getFirst } = require('../src/arrayUtils');
 
 describe('partition', function() {
   it('should make partition based on the quality given', function() {
@@ -34,5 +34,12 @@ describe('getLast', function() {
   it('should get the last element of the array', function() {
     const actual = getLast([1, 2, 3]);
     assert.deepStrictEqual(actual, 3);
+  });
+});
+
+describe('getFirst', function() {
+  it('should get the first element of the array', function() {
+    const actual = getFirst([1, 2, 3]);
+    assert.deepStrictEqual(actual, 1);
   });
 });
