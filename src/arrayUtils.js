@@ -1,3 +1,7 @@
+const elementsFromSecond = function(array) {
+  return array.slice(2);
+};
+
 const getFirst = function(array) {
   return array[0];
 };
@@ -20,4 +24,4 @@ const partition = function(quality, array) {
   return result;
 };
 
-module.exports = { partition, getLast, getFirst };
+module.exports = { partition, getLast, getFirst, elementsFromSecond };
