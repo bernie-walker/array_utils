@@ -1,6 +1,7 @@
 const { assert } = require('chai');
 const {
   partition,
+  mapTwo,
   getLast,
   getFirst,
   elementsFromSecond
@@ -31,6 +32,15 @@ describe('partition', function() {
   it('should not alter an empty array', function() {
     const actual = partition(() => {}, []);
     const expected = [];
+    assert.deepStrictEqual(actual, expected);
+  });
+});
+
+describe('mapTwo', function() {
+  it('should map the elements of the two arrays by given function', function() {
+    const add = (a, b) => a + b;
+    const actual = mapTwo(add, [1, 2, 3], [3, 1, 2]);
+    const expected = [4, 3, 5];
     assert.deepStrictEqual(actual, expected);
   });
 });
